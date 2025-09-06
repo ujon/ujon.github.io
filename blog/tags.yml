@@ -1,19 +1,27 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+# Programming Languages
+java:
+  label: Java
+  permalink: /java
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+kotlin:
+  label: Kotlin
+  permalink: /kotlin
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+javascript:
+  label: JavaScript
+  permalink: /javascript
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+# Frameworks
+spring-boot:
+  label: Spring Boot
+  permalink: /spring-boot
+
+spring-batch:
+  label: Spring Batch
+  permalink: /spring-batch
+
+# ETC
+system-design:
+  label: System Design
+  permalink: /system-design
+

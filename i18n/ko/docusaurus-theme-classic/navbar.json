@@ -1,0 +1,10 @@
+{
+  "logo.alt": {
+    "message": "ujon",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  }
+}

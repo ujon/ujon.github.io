@@ -1,44 +1,60 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import GradientBackground from "@site/src/components/GradientBackground";
+import { translate } from '@docusaurus/Translate';
 
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
+export default function Home(): ReactNode {
+    const {siteConfig} = useDocusaurusContext();
+    return (
+        <GradientBackground>
+            <Layout
+                title={`Hello from ${siteConfig.title}`}
+                description="Description will go into a meta tag in <head />"
+            >
+                <main>
+                    <HomepageContent/>
+                </main>
+            </Layout>
+        </GradientBackground>
+    );
 }
 
-export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
-  );
+function HomepageContent() {
+    const {siteConfig} = useDocusaurusContext();
+
+    const siteTitle = translate({
+        id: 'i18n.homepage.title',
+        message: 'Yoo Jongho',
+        description: 'The title of the Docusaurus site',
+    });
+
+    const siteTagline = translate({
+        id: 'i18n.homepage.tagline',
+        message: 'Coffee, Keyboard, and Code',
+        description: 'The tagline of the Docusaurus site',
+    });
+    return (
+        <div className={styles.contentOverlay}>
+            <div className={styles.textCenter}>
+                <h1 className={styles.title}>
+                    {siteTitle}
+                </h1>
+                <p className={styles.subtitle}>
+                    {siteTagline}
+                </p>
+                {/*<div className="button-container">*/}
+                {/*    <button className="button-primary">*/}
+                {/*        Get Started*/}
+                {/*    </button>*/}
+                {/*    <button className="button-secondary">*/}
+                {/*        Learn More*/}
+                {/*    </button>*/}
+                {/*</div>*/}
+            </div>
+        </div>
+    )
 }
