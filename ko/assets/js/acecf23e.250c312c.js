@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkujon_github_io=self.webpackChunkujon_github_io||[]).push([[1903],{1912:o=>{o.exports=JSON.parse('{"blogBasePath":"/ko/blog","blogTitle":"Blog","authorsListPath":"/ko/blog/authors"}')}}]);

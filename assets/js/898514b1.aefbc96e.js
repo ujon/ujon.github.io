@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkujon_github_io=self.webpackChunkujon_github_io||[]).push([[67],{9187:i=>{i.exports=JSON.parse('{"tags":[{"label":"mobility","permalink":"/docs/tags/mobility","count":1}]}')}}]);

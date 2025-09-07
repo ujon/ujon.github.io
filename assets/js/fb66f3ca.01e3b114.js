@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkujon_github_io=self.webpackChunkujon_github_io||[]).push([[754],{1976:i=>{i.exports=JSON.parse('{"tag":{"label":"mobility","permalink":"/docs/tags/mobility","allTagsPath":"/docs/tags","count":1,"items":[{"id":"memo/dictionary","title":"Domain Dictionary","description":"A","permalink":"/docs/memo/dictionary"}],"unlisted":false}}')}}]);
