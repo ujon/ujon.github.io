@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkujon_github_io=self.webpackChunkujon_github_io||[]).push([[958],{2824:o=>{o.exports=JSON.parse('{"metadata":{"permalink":"/ko/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

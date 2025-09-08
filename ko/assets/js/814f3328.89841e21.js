@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkujon_github_io=self.webpackChunkujon_github_io||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\ud50c\ub808\uc774\uc2a4\ud640\ub354","permalink":"/ko/blog/placeholder","unlisted":false,"date":"2025-09-08T20:45:00.000Z"}]}')}}]);
