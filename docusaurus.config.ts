@@ -15,6 +15,7 @@ const config: Config = {
     baseUrl: '/',
     organizationName: 'ujon',
     projectName: 'ujon.github.io',
+    deploymentBranch: 'website',
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     i18n: {
