@@ -115,7 +115,7 @@ MaaS는 기본적으로 개인 교통수단을 포함해 열차, 택시, 버스 
 
 ### TSP (Transportation Service Provider)
 
-교통 서비스 제공자. MaaS 플랫폼과 연동되어 버스, 택시, 공유 서비스 등을 제공.  
+교통 서비스 제공자. MaaS 플랫폼과 연동되어 버스, 택시, 공유 서비스 등을 제공.
 
 도메인: `mobility`
 
@@ -128,6 +128,31 @@ MaaS는 기본적으로 개인 교통수단을 포함해 열차, 택시, 버스 
 도메인: `mobility`
 
 ## V
+
+### VDS (Vehicle Detection System)
+
+차량검지기, 도로 상에 약 1km 간격으로 설치되어 실시간으로 교통량, 점유율, 속도, 대기행렬길이, 차량길이 등의 정보를 검지하여 소통 및 돌발상황 등을 감시하는 장치로 도로 환경적 특성에 따라 설치하며 종류는
+루프식, 영상식, 레이더식 등이 있다.
+
+도메인: `mobility`
+
+### VMS (Variable Message Sign)
+
+도로 전광 표지, 전자식 디스플레이를 통해 운전자에게 실시간 교통 정보, 사고·공사 안내, 기상 상황, 안전운전 메시지 등을 제공하는 장치입니다.
+도로의 가변적인 상황에 대응하여 운전자가 적절한 의사결정을 내릴 수 있도록 돕는 중요한 교통 관리 수단입니다.
+
+도메인: `mobility`
+
+관련단어: [VSL (Variable Speed Limit)](#vsl-variable-speed-limit)
+
+### VSL (Variable Speed Limit)
+
+가변형속도제한표지정보, 기상 악화, 교통량 변화, 돌발 상황 등 도로 여건에 따라 제한 속도를 실시간으로 조정하여 운전자에게 안내하는 표지입니다.
+이를 통해 교통 안전을 강화하고 도로 운영의 효율성을 높일 수 있습니다.
+
+도메인: `mobility`
+
+관련단어: [VMS (Variable Message Sign)](#vms-variable-message-sign)
 
 ## W
 

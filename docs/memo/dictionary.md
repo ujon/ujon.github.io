@@ -140,6 +140,36 @@ domain: mobility
 
 ## V
 
+### VDS (Vehicle Detection System)
+
+A Vehicle Detection System is installed along roads at intervals of approximately 1 km to collect real-time traffic data
+such as volume, occupancy, speed, queue length, and vehicle length.
+It is used for monitoring traffic flow and detecting incidents (e.g., accidents, congestion).
+Depending on the road environment, different technologies are applied, including loop detectors, video-based detectors,
+and radar-based detectors.
+
+domain: `mobility`
+
+### VMS (Variable Message Sign)
+
+A Variable Message Sign is an electronic display installed along roadways to provide drivers with real-time information
+such as traffic conditions, incidents, road works, weather alerts, and safety messages.
+It is a key traffic management tool that helps drivers make informed decisions in response to changing road conditions.
+
+domain: `mobility`
+
+related: [VSL (Variable Speed Limit)](#vsl-variable-speed-limit)
+
+### VSL (Variable Speed Limit)
+
+A Variable Speed Limit system adjusts and displays speed limits dynamically, according to road conditions, such as
+adverse weather, traffic congestion, or incidents.
+This enhances traffic safety and improves the overall efficiency of road operations.
+
+domain: `mobility`
+
+related: [VMS (Variable Message Sign)](#vms-variable-message-sign)
+
 ## W
 
 ## X
