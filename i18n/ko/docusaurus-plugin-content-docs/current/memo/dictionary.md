@@ -52,6 +52,16 @@ tags: [ 'mobility' ]
 
 ## I
 
+### IMU (Inertial Measurement Unit)
+
+관성측정장치. 가속도계<sup>Accelerometer</sup>, 자이로스코프<sup>Gyroscope</sup>, 때로는 자기계<sup>Magnetometer</sup>를 결합하여  
+물체(차량, 로봇, 드론 등)의 **가속도, 각속도, 방향, 자세<sup>orientation</sup>** 등을 측정하는 장치.  
+위성 신호<sup>GPS</sup>와 결합하여 차량의 정밀 위치 추정, 자율주행, 주행 보조 시스템<sup>ADAS</sup> 등에 활용됨.
+
+도메인: `mobility`
+
+관련단어: [ADAS (Advanced Driver Assistance System)](#adas-advanced-driver-assistance-system)
+
 ### IVI (In-Vehicle Infotainment)
 
 차량용 인포테인먼트 시스템. 차량 내부에서 제공되는 **엔터테인먼트 + 정보 서비스**를 통칭함.  

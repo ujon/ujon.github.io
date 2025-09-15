@@ -46,14 +46,24 @@ It includes displays, control units, and infotainment operation functions for th
 
 domain: `mobility`
 
-Related
-Words: [IVI (In-Vehicle Infotainment)](#ivi-in-vehicle-infotainment), [RSI (Rear Seat Interface)](#rsi-rear-seat-interface)
+related: [IVI (In-Vehicle Infotainment)](#ivi-in-vehicle-infotainment), [RSI (Rear Seat Interface)](#rsi-rear-seat-interface)
 
 ## G
 
 ## H
 
 ## I
+
+### IMU (Inertial Measurement Unit)
+
+A device that combines accelerometers, gyroscopes,  
+and sometimes magnetometers to measure an object's **acceleration, angular velocity, orientation, and attitude**.  
+When integrated with GPS, it enables precise vehicle localization, autonomous driving,  
+and ADAS.
+
+domain: `mobility`
+
+related words: [ADAS (Advanced Driver Assistance System)](#adas-advanced-driver-assistance-system)
 
 ### IVI (In-Vehicle Infotainment)
 
@@ -64,8 +74,7 @@ Auto).
 
 domain: `mobility`
 
-Related
-Words: [FSI (Front Seat Interface)](#fsi-front-seat-interface), [RSI (Rear Seat Interface)](#rsi-rear-seat-interface)
+related: [FSI (Front Seat Interface)](#fsi-front-seat-interface), [RSI (Rear Seat Interface)](#rsi-rear-seat-interface)
 
 ## J
 
@@ -116,8 +125,7 @@ It provides displays, audio/video controls, and entertainment services for rear-
 
 domain: `mobility`
 
-Related
-Words: [FSI (Front Seat Interface)](#fsi-front-seat-interface), [IVI (In-Vehicle Infotainment)](#ivi-in-vehicle-infotainment)
+related: [FSI (Front Seat Interface)](#fsi-front-seat-interface), [IVI (In-Vehicle Infotainment)](#ivi-in-vehicle-infotainment)
 
 ## S
 
