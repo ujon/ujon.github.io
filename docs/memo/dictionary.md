@@ -112,6 +112,17 @@ It is used for vehicle maintenance, monitoring, and remote diagnostic services.
 
 domain: `mobility`
 
+### OTA (Over-The-Air)
+
+A technology that enables remote software/firmware updates and patches for vehicles via wireless communication.  
+Allows feature upgrades, security patches, and new services without requiring a service center visit, contributing to *
+*continuous performance improvement and reduced maintenance costs**.  
+Considered a key enabler in autonomous driving and connected car environments.
+
+domain: `mobility`
+
+related: [OBD (On-Board Diagnostics)](#obd-on-board-diagnostics)
+
 ## P
 
 ## Q
