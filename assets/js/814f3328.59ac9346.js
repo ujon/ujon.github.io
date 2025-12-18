@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkujon_github_io=self.webpackChunkujon_github_io||[]).push([[472],{5513:t=>{t.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"[Project Structure] Spring Boot","permalink":"/blog/20251201__project_structure__spring_boot","unlisted":false,"date":"2025-12-18T00:00:00.000Z"}]}')}}]);
