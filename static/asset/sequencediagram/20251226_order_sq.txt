@@ -1,0 +1,67 @@
+title Order
+
+participant "Client A" as client_a
+participant "Client B" as client_b
+participant "Restaurant Owner" as restaurant_owner
+participant "Kitchen Device" as kitchen_device
+participant "Client Server" as client_server
+participant "Admin Server" as admin_server
+participant "Websocket Server" as websocket_server
+participant "Postgres" as postgres
+participant "Redis" as redis
+
+note over client_a: Scan QR code
+
+client_a->client_server: Request menu list
+client_server->postgres: Query menu data
+postgres-->client_server: Menu list
+client_server-->client_a: Return menu list
+
+note over client_b: Scan QR code at same table
+
+client_b->client_server: Request menu list
+client_server->postgres: Query menu data
+postgres-->client_server: Menu list
+client_server-->client_b: Return menu list
+
+client_a->websocket_server: Establish WebSocket connection
+websocket_server->redis: Subscribe to Pub/Sub channel
+redis-->websocket_server: Subscription confirmed
+websocket_server-->client_a: Connection established
+
+client_b->websocket_server: Establish WebSocket connection
+websocket_server->redis: Subscribe to Pub/Sub channel
+redis-->websocket_server: Subscription confirmed
+websocket_server-->client_b: Connection established
+
+note over client_a: Select items and add to cart
+
+client_a->websocket_server: Add item to cart
+websocket_server->redis: Publish to channel
+redis->websocket_server: Broadcast to subscribers
+websocket_server->client_a: Sync cart update
+websocket_server->client_b: Sync cart update
+
+note over client_a: Confirm order
+
+client_a->client_server: Submit order (IP, GPS included)
+
+note over client_server: Validate location (IP + GPS)
+
+client_server->postgres: Validate menu items
+postgres-->client_server: Menu details
+
+note over client_server: Check inventory with Optimistic Lock
+
+client_server->postgres: Save order
+postgres-->client_server: Order saved
+
+client_server->redis: Produce order to Streams
+client_server-->client_a: Order confirmed
+
+redis->websocket_server: Consume order from Streams
+websocket_server->client_a: Order status update
+websocket_server->client_b: Order status update
+websocket_server->kitchen_device: New order notification
+
+note over kitchen_device: Order received
