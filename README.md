@@ -1,5 +1,11 @@
 # ujon.github.io
 
+## deploy
+
+```sh
+USE_SSH=true DEPLOYMENT_BRANCH=website bun run deploy
+```
+
 ## translation
 
 ```shell
