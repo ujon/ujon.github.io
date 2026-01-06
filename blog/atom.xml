@@ -2,11 +2,89 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ujon.github.io/blog</id>
     <title>ujon Blog</title>
-    <updated>2025-12-18T00:00:00.000Z</updated>
+    <updated>2025-12-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ujon.github.io/blog"/>
     <subtitle>ujon Blog</subtitle>
     <icon>https://ujon.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[[System Design] QR Order]]></title>
+        <id>https://ujon.github.io/blog/20251226__qr_order</id>
+        <link href="https://ujon.github.io/blog/20251226__qr_order"/>
+        <updated>2025-12-26T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Overview]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="overview">Overview<a href="https://ujon.github.io/blog/20251226__qr_order#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview">​</a></h2>
+<p>During a trip to the US, I had a great experience using a QR code ordering and payment system at a restaurant. Recently, I encountered the same system at a restaurant in Korea during lunch and decided to design it myself.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="requirements">Requirements<a href="https://ujon.github.io/blog/20251226__qr_order#requirements" class="hash-link" aria-label="Direct link to Requirements" title="Direct link to Requirements">​</a></h2>
+<ul>
+<li>Customers can place orders by scanning a QR code</li>
+<li>Each table has a unique QR code</li>
+<li>Multiple customers at the same table can share a cart in real-time and order together</li>
+<li>The kitchen can immediately view completed orders</li>
+<li>Orders cannot be placed from outside the restaurant</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="system-design">System Design<a href="https://ujon.github.io/blog/20251226__qr_order#system-design" class="hash-link" aria-label="Direct link to System Design" title="Direct link to System Design">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="system design" src="https://ujon.github.io/assets/images/20251226_qr_order-4e7e1879c520f646639e124373eb1f8a.png" width="1701" height="1071" class="img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="websocket-server">Websocket Server<a href="https://ujon.github.io/blog/20251226__qr_order#websocket-server" class="hash-link" aria-label="Direct link to Websocket Server" title="Direct link to Websocket Server">​</a></h3>
+<p>Handles real-time communication and runs as a separate instance from the Client API and Admin API for load distribution.</p>
+<p><strong>Key Features</strong></p>
+<ul>
+<li>Real-time cart synchronization between customers at the same table</li>
+<li>Order notifications to kitchen devices</li>
+</ul>
+<p><strong>Implementation</strong></p>
+<ul>
+<li>Cart Synchronization<!-- -->
+<ul>
+<li>Uses Redis Pub/Sub to manage channels and support horizontal scaling.</li>
+<li>Pub/Sub does not persist messages, which means there is a possibility of message loss. However, since cart data is ephemeral and can be re-synced during order confirmation, Streams is not used.</li>
+</ul>
+</li>
+<li>Order Processing<!-- -->
+<ul>
+<li>Uses Redis Streams to ensure orders are reliably delivered to the kitchen.</li>
+<li>Implements Consumer Groups to enable reprocessing in case of failures.</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="client-api">Client API<a href="https://ujon.github.io/blog/20251226__qr_order#client-api" class="hash-link" aria-label="Direct link to Client API" title="Direct link to Client API">​</a></h3>
+<p>Provides APIs for customers.</p>
+<p><strong>Key Features</strong></p>
+<ul>
+<li>Menu listing</li>
+<li>Order submission</li>
+</ul>
+<p><strong>Implementation</strong></p>
+<ul>
+<li>Order Submission<!-- -->
+<ul>
+<li>Validates menu item consistency upon order submission. Applies Optimistic Locking to handle concurrency issues when menu items have limited availability.</li>
+<li>Produces order messages to Redis Streams so the kitchen can receive them.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Security Considerations</strong></p>
+<p>The following validation logic is required to block orders from outside the restaurant:</p>
+<ul>
+<li>Client IP validation (verify the request originates from the restaurant's network)</li>
+<li>GPS coordinate validation (calculate distance from the restaurant's location)</li>
+<li>Combination of both conditions to prevent bypass attempts</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="admin-api">Admin API<a href="https://ujon.github.io/blog/20251226__qr_order#admin-api" class="hash-link" aria-label="Direct link to Admin API" title="Direct link to Admin API">​</a></h3>
+<p>Provides APIs for restaurant owners and staff.</p>
+<p><strong>Key Features</strong></p>
+<ul>
+<li>Menu registration and management</li>
+<li>Table-specific billing summary</li>
+<li>Order status management</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sequence-diagram">Sequence Diagram<a href="https://ujon.github.io/blog/20251226__qr_order#sequence-diagram" class="hash-link" aria-label="Direct link to Sequence Diagram" title="Direct link to Sequence Diagram">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="sequencediagram" src="https://ujon.github.io/assets/images/20251226_order_sq-b327ab5bb507e54959ad395deb67227c.svg" width="1335" height="2218" class="img_ev3q"></p>]]></content>
+        <author>
+            <name>ujon</name>
+        </author>
+        <category label="System Design" term="System Design"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[Project Structure] Spring Boot]]></title>
         <id>https://ujon.github.io/blog/20251201__project_structure__spring_boot</id>

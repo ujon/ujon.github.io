@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkujon_github_io=self.webpackChunkujon_github_io||[]).push([[121],{8070:t=>{t.exports=JSON.parse('{"tags":[{"label":"Project Structure","permalink":"/blog/tags/project-structure","count":1}]}')}}]);
