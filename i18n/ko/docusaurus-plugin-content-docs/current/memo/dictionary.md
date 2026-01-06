@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: '도메인 사전'
-tags: [ 'mobility' ]
+title: "도메인 사전"
+tags: ["mobility"]
 ---
 
 # 도메인 사전
@@ -176,10 +176,14 @@ MaaS는 기본적으로 개인 교통수단을 포함해 열차, 택시, 버스 
 
 ## W
 
+### WMS (Warehous Management System)
+
+물품 입고부터 출하까지의 모든 과정을 관리하여 일상적인 창고 운영을 최적화하며, 실시간 재고 가시성을 제공합니다. 또한 입고, 적치, 피킹, 포장, 배송과 같은 작업을 자동화하여 공급망 이행(Fulfillment)의 효율성과 정확성을 높여줍니다.
+
+domain: `mobility`
+
 ## X
 
 ## Y
 
 ## Z
- 
-

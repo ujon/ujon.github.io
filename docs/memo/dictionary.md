@@ -191,6 +191,12 @@ related: [VMS (Variable Message Sign)](#vms-variable-message-sign)
 
 ## W
 
+### WMS (Warehouse Management System)
+
+Optimizes daily warehouse operations, managing everything from goods arrival to shipment, offering real-time inventory visibility, and automating tasks like receiving, put-away, picking, packing, and shipping for greater efficiency and accuracy in supply chain fulfillment. 
+
+domain: `mobility`
+
 ## X
 
 ## Y
