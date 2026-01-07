@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-title: 'Domain Dictionary'
-tags: [ 'mobility' ]
+title: "Domain Dictionary"
+tags: ["mobility"]
 ---
 
 # Domain Dictionary
@@ -16,6 +16,12 @@ and adaptive cruise control.
 domain: `mobility`
 
 ## B
+
+### BM25 (Best Matching 25)
+
+BM25 is a ranking algorithm used in information retrieval. It scores the relevance between documents and search queries as an improved version of TF-IDF, probabilistically considering term frequency (TF) and document length. It assigns higher scores when terms appear frequently in a document and are rare across the entire document collection, while normalizing for document length to prevent bias against longer documents.
+
+domain: `search`
 
 ## C
 
@@ -115,8 +121,8 @@ domain: `mobility`
 ### OTA (Over-The-Air)
 
 A technology that enables remote software/firmware updates and patches for vehicles via wireless communication.  
-Allows feature upgrades, security patches, and new services without requiring a service center visit, contributing to *
-*continuous performance improvement and reduced maintenance costs**.  
+Allows feature upgrades, security patches, and new services without requiring a service center visit, contributing to \*
+\*continuous performance improvement and reduced maintenance costs\*\*.  
 Considered a key enabler in autonomous driving and connected car environments.
 
 domain: `mobility`
@@ -193,7 +199,7 @@ related: [VMS (Variable Message Sign)](#vms-variable-message-sign)
 
 ### WMS (Warehouse Management System)
 
-Optimizes daily warehouse operations, managing everything from goods arrival to shipment, offering real-time inventory visibility, and automating tasks like receiving, put-away, picking, packing, and shipping for greater efficiency and accuracy in supply chain fulfillment. 
+Optimizes daily warehouse operations, managing everything from goods arrival to shipment, offering real-time inventory visibility, and automating tasks like receiving, put-away, picking, packing, and shipping for greater efficiency and accuracy in supply chain fulfillment.
 
 domain: `mobility`
 
